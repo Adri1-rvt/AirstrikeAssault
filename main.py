@@ -1,6 +1,6 @@
 """
 Programme python principal
-Auteurs : Thomas BOTTALICO, Rayane BOUSSOURA, Alexandre BRENSKI, Arthur HACQUES, Tess POIRAT,                                                         vbb                        <p^moipûojmkln b;,nvgfkr'"eé!Adrien RIVET
+Auteurs : Thomas BOTTALICO, Rayane BOUSSOURA, Alexandre BRENSKI, Arthur HACQUES, Tess POIRAT, Adrien RIVET
 Version : 1.1
 """
 
