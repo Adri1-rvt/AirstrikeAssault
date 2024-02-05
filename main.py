@@ -4,16 +4,17 @@ Auteurs : Thomas BOTTALICO, Rayane BOUSSOURA, Alexandre BRENSKI, Arthur HACQUES,
 Version : 1.1
 """
 
+import platform
 import os
 import pygame
 from game import Game
 pygame.init()
 
 #Gestion Probléme MacOs
-f = open("/dev/null", "w")
-os.dup2(f.fileno(), 2)
-f.close()
-
+if platform.system() == 'Darwin':
+    f = open("/dev/null", "w")
+    os.dup2(f.fileno(), 2)
+    f.close()
 
 # générer la fenêtre du jeu
 pygame.display.set_caption("Airstrike Assault") # à faire : rajouter icone en 2nd paramètre
