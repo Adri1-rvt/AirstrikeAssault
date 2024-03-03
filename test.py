@@ -4,7 +4,6 @@ import pygame
 class munitions:
 
     def __init__(self, direction,vitesse):
-        """direction -> float"""
         self.vitesse = vitesse
         self.direction = direction * (pi / 180)
         self.temp = 0

@@ -1,32 +1,45 @@
 """
 Programme python de la classe Missile
-Auteurs : Thomas BOTTALICO, Rayane BOUSSOURA, Alexandre BRENSKI, Arthur HACQUES, Tess POIRAT,                                                         vbb                        <p^moipûojmkln b;,nvgfkr'"eé!Adrien RIVET
+Auteurs : Thomas BOTTALICO, Rayane BOUSSOURA, Alexandre BRENSKI, Arthur HACQUES, Tess POIRAT, Adrien RIVET
 Version : 1.1
 """
 
-import pygame
 
-# définir la class du missile
+"""IMPORT DES LIBRAIRIES ET DES FONCTIONS EXTERNES"""
+
+import pygame # import de la librairie pygame pour gérer le jeu
+import plane # import du fichier plane.py
+
+
+"""CORPS DU PROGRAMME"""
+
+# classe qui gère le missile
 class Missile(pygame.sprite.Sprite) :
     def __init__(self, player) :
         super().__init__()
-        self.velocity = 10 # vitesse (à ajuster)
+        self.velocity = 10 # vitesse du missile
         self.player = player
-        self.image = pygame.transform.scale(pygame.image.load("assets/missile_2.png"), (50, 50))
-        self.image = pygame.transform.rotate(self.image, 45)
-        self.rect = self.image.get_rect()
-        self.rect.x = 325
-        self.rect.y = 390
+        self.image = pygame.transform.scale(pygame.image.load("assets/missile_2.png"), (50, 50)) # application de l'image redimensionnée au missile
+        self.image = pygame.transform.rotate(self.image, 45) # rotation de l'image du missile
+        self.rect = self.image.get_rect() # obtention de la hitbox du missile
+        self.rect.x = 325 # position initiale en x du missile
+        self.rect.y = 390 # position initiale en y du missile
 
-    # fonction pour supprimer un projectile (en cas de sortie de l'écran ou collision)
+    # fonction de suppression du projectile (en cas de sortie de l'écran ou collision)
     def remove(self) :
         self.player.all_missiles.remove(self)
 
+    # fonction de gestion de la trajectoire du missile
     def move(self) :
-        self.rect.y -= self.velocity
+        self.rect.y -= self.velocity # affectation de nouvelle coordonnée en y du missile
+
+        # vérifier si le missile touche un avion
+        if self.player.game.check_collision(self, self.player.game.all_planes):
+            self.remove() # supprimer le projectile
+            for plane in pygame.sprite.spritecollide(self, self.player.game.all_planes, False):
+                plane.respawn() # appel de la fonction respawn de plane
 
         # vérifier que le missile n'est plus présent sur l'écran
         if self.rect.y < 1 :
-            # supprimer le missile
-            self.remove()
+            self.remove() # supprimer le missile
 

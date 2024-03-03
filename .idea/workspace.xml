@@ -4,16 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbbf8982-bf75-4dd9-af74-8b0076b79403" name="Changes" comment="OS error commit">
+    <list default="true" id="fbbf8982-bf75-4dd9-af74-8b0076b79403" name="Changes" comment="Update 05/02">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plane.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/assets2_sounds_click.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/game_over.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/meteorite.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sounds/tir.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/missile.py" beforeDir="false" afterPath="$PROJECT_DIR$/missile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -88,6 +109,27 @@
       <workItem from="1707117784442" duration="14000" />
       <workItem from="1707118452421" duration="411000" />
       <workItem from="1707119100103" duration="76000" />
+      <workItem from="1707125401102" duration="1983000" />
+      <workItem from="1707229410947" duration="313000" />
+      <workItem from="1707242505492" duration="1218000" />
+      <workItem from="1707245923274" duration="341000" />
+      <workItem from="1707253291609" duration="273000" />
+      <workItem from="1707316936070" duration="106000" />
+      <workItem from="1707343744692" duration="1370000" />
+      <workItem from="1707386376883" duration="725000" />
+      <workItem from="1707396159923" duration="991000" />
+      <workItem from="1707761150812" duration="3351000" />
+      <workItem from="1707822255891" duration="111000" />
+      <workItem from="1707822680669" duration="21000" />
+      <workItem from="1707822884688" duration="65000" />
+      <workItem from="1708004466246" duration="170000" />
+      <workItem from="1708019976787" duration="71000" />
+      <workItem from="1708020152017" duration="37000" />
+      <workItem from="1709199021180" duration="136000" />
+      <workItem from="1709199325835" duration="692000" />
+      <workItem from="1709200842081" duration="34000" />
+      <workItem from="1709279312994" duration="103000" />
+      <workItem from="1709501748014" duration="4423000" />
     </task>
     <task id="LOCAL-00001" summary="Initial comit">
       <option name="closed" value="true" />
@@ -105,7 +147,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707118640529</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Physic comit">
+      <option name="closed" value="true" />
+      <created>1707125478103</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707125478103</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update 05/02">
+      <option name="closed" value="true" />
+      <created>1707127054919</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707127054919</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,9 +172,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial comit" />
     <MESSAGE value="OS error commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="OS error commit" />
+    <MESSAGE value="Physic comit" />
+    <MESSAGE value="Update 05/02" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 05/02" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Airstrike_Assault$main.coverage" NAME="main Coverage Results" MODIFIED="1707119100857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Airstrike_Assault$main.coverage" NAME="main Coverage Results" MODIFIED="1709279316226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
