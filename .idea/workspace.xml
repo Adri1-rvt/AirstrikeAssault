@@ -4,19 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbbf8982-bf75-4dd9-af74-8b0076b79403" name="Changes" comment="Update 05/02">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plane.py" afterDir="false" />
+    <list default="true" id="fbbf8982-bf75-4dd9-af74-8b0076b79403" name="Changes" comment="Update 04/03">
+      <change afterPath="$PROJECT_DIR$/bomb.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sounds/assets2_sounds_click.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sounds/game_over.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sounds/meteorite.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/sounds/tir.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/missile.py" beforeDir="false" afterPath="$PROJECT_DIR$/missile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plane.py" beforeDir="false" afterPath="$PROJECT_DIR$/plane.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pythonProject/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +124,9 @@
       <workItem from="1709199325835" duration="692000" />
       <workItem from="1709200842081" duration="34000" />
       <workItem from="1709279312994" duration="103000" />
-      <workItem from="1709501748014" duration="4423000" />
+      <workItem from="1709501748014" duration="4457000" />
+      <workItem from="1709507793673" duration="43000" />
+      <workItem from="1709536138078" duration="4255000" />
     </task>
     <task id="LOCAL-00001" summary="Initial comit">
       <option name="closed" value="true" />
@@ -163,7 +160,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707127054919</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update 04/03">
+      <option name="closed" value="true" />
+      <created>1709507718296</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709507718296</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update 04/03">
+      <option name="closed" value="true" />
+      <created>1709507818384</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709507818384</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,9 +187,10 @@
     <MESSAGE value="OS error commit" />
     <MESSAGE value="Physic comit" />
     <MESSAGE value="Update 05/02" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 05/02" />
+    <MESSAGE value="Update 04/03" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 04/03" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Airstrike_Assault$main.coverage" NAME="main Coverage Results" MODIFIED="1709279316226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Airstrike_Assault$main.coverage" NAME="main Coverage Results" MODIFIED="1709541479922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

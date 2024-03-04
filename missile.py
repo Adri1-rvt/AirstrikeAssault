@@ -9,6 +9,7 @@ Version : 1.1
 
 import pygame # import de la librairie pygame pour gérer le jeu
 import plane # import du fichier plane.py
+import time # import de la librairie time pour gérer le temps dans le jeu
 
 
 """CORPS DU PROGRAMME"""
@@ -42,4 +43,3 @@ class Missile(pygame.sprite.Sprite) :
         # vérifier que le missile n'est plus présent sur l'écran
         if self.rect.y < 1 :
             self.remove() # supprimer le missile
-

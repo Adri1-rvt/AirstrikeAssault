@@ -42,3 +42,6 @@ class Plane(pygame.sprite.Sprite):
         if self.rect.x < -150:
             # supprimer le jet en appelant la fonction respawn
             self.respawn()
+
+        if self.rect.x == 500:
+            print("Shooter")
