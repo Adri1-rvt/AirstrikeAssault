@@ -25,6 +25,6 @@ class Player(pygame.sprite.Sprite) :
         self.all_missiles = pygame.sprite.Group()
         self.image = pygame.transform.scale(pygame.image.load("assets/boat.png"), (200, 200)) # redimensionner l'image en 200x200 et affecter l'image
 
-    def lauch_missile(self) :
+    def launch_missile(self) :
         # créer une nouvelle instance de la classe Missile
         self.all_missiles.add(Missile(self))

@@ -20,8 +20,8 @@ class Plane(pygame.sprite.Sprite):
         self.health = 100 # points de vie du jet
         self.max_health = 100 # points de vie maximum du jet
         self.attack = 5 # points d'attaque du jet
-        self.image = pygame.transform.scale(pygame.image.load("assets/jet.png"), (150, 150)) # définition de l'image du jet et de sa taille (en pixels)
-        self.image = pygame.transform.rotate(self.image, 135) # alignement vertical du jet (car jet en diagonal sur l'image)
+        self.image = pygame.transform.scale(pygame.image.load("assets/jet2.png"), (86, 112)) # définition de l'image du jet et de sa taille (en pixels)
+        self.image = pygame.transform.rotate(self.image, 90) # alignement vertical du jet (car jet en diagonal sur l'image)
         self.rect = self.image.get_rect() # récupération de la hitbox du jet
         self.rect.x = 1200 + random.randint(0, 500) # définition aléatoire de la position en x du jet
         self.rect.y = 20 + random.randint(0, 100) # définition aléatoire de la position en y du jet
@@ -43,5 +43,5 @@ class Plane(pygame.sprite.Sprite):
             # supprimer le jet en appelant la fonction respawn
             self.respawn()
 
-        if self.rect.x == 500:
+        if self.rect.x == 200:
             print("Shooter")

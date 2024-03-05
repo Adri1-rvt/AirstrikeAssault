@@ -11,6 +11,7 @@ import platform # import de la librairie platform pour détecter le système d'e
 import os # import de la librairie os pour influer sur le système d'exploitation
 import pygame # import de la librairie pygame pour gérer le jeu
 from game import Game # import de la classe Game depuis game.py
+import time # import de la librairie time pour le gestion du temps
 
 
 """CORPS DU PROGRAMME PRINCIPAL"""
@@ -36,6 +37,10 @@ background = pygame.image.load("assets/background.png") # affection l'image de l
 game = Game() # appel de la classe Game pour charger le jeu
 running = True # définition de la variable d'exécution sur 1
 
+# Variables pour le contrôle du délai entre les tirs de missiles
+last_missile_time = time.time()
+missile_fire_rate = 1.0  # Délai minimum entre chaque tir de missile en secondes
+
 # tant que le programme s'exécute
 while running :
     # appliquer l'arrière plan du jeu
@@ -51,6 +56,13 @@ while running :
     # récupérer les avions
     for plane in game.all_planes:
         plane.forward()
+
+        # Vérifier la collision entre les missiles et les avions
+        for missile in game.player.all_missiles:
+            if pygame.sprite.collide_rect(missile, plane):
+                missile.explode()  # Appel de la fonction d'explosion du missile
+                plane.respawn()  # Appel de la fonction respawn de l'avion
+                missile.remove()  # Supprimer le missile
 
     # appliquer l'ensemble des images du groupe de missiles
     game.player.all_missiles.draw(screen)
@@ -70,5 +82,9 @@ while running :
             game.pressed[element.key] = True
 
             # détecter si la touche espace est pressée pour lancer notre projectile
-            if element.key == pygame.K_SPACE :
-                game.player.lauch_missile() # appel de la fonction de lancement du missile
+            if element.key == pygame.K_SPACE:
+                current_time = time.time()
+                if current_time - last_missile_time >= missile_fire_rate:
+                    game.player.launch_missile()  # appel de la fonction de lancement du missile
+                    last_missile_time = current_time  # maj du temps du dernier lancement de missile
+
