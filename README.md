@@ -49,29 +49,36 @@
 
 ## Comment jouer
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+Pour jouer à Airstrike Assault, rien de plus simple ! Il vous suffit de suivre quelques étapes faciles :
+- Assurez-vous que Python est installé sur votre machine : Avant de pouvoir exécuter notre code Python, vous devez vous assurer que le langage de programmation Python est bien installé sur votre système. Pour vérifier cela, ouvrez votre terminal préféré (l'invite de commande Windows par défaut fait l'affaire) et tapez "python --version". Si Python n'est pas déjà installé, téléchargez-le depuis le site officiel (https://www.python.org/) et suivez les instructions d'installation.
+- Téléchargez ou clonez le code source : Assurez-vous d'avoir une copie du code source de notre projet sur votre ordinateur. Vous pouvez le télécharger depuis GitHub, voir : <a href="#télécharger">Télécharger</a>.
+- Exécutez le code : Après avoir téléchargé et décompressé le dossier avec les éléments de notre projet, vous pouvez exécuter le code source du projet. Vous devrez chercher le fichier principal du projet, "main.py". Pour l'exécuter, vous avez plusieurs possibilités :
+    - Utiliser un IDE : ouvrir le répertoire du projet dans un IDE (comme PyCharm par exemple), installer la librairie pygame, cliquer sur le fichier "main.py" et l'exécuter. Le code sera exécuté directement dans la console de votre IDE préféré.
+    - Utiliser un terminal : depuis un terminal, naviguer jusqu'au répertoire du projet à l'aide de la commande "cd", puis tapez "python main.py". Le code sera exécuté directement dans votre terminal.
+
+Commandes utilisées :
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/amitmerchant1990/electron-markdownify
+# Vérifier si python est installé sur votre machine
+$ python --version
 
-# Go into the repository
-$ cd electron-markdownify
+# Se déplacer dans le repertoir du projet (exemple)
+$ cd Desktop\\Airstrike_Assault
 
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
+# Lancer le code (si pygame est déjà installé)
+$ python main.py
 ```
 
 > **Note**
-> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+> Selon votre système d'exploitation ou le terminal utilisé, les commandes peuvent être différentes.
 
 
 ## Télécharger
 
-You can [download](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0) the latest installable version of Markdownify for Windows, macOS and Linux.
+Vous pouvez télécharger notre code source depuis notre page GitHub accessible via ce lien : [Télécharger](https://github.com/Adri1-rvt/Airstrike_Assault) 
+<br>Pour cela, ouvrez le lien ci-dessus, puis cliquez sur le bonton vert en haut à droite de la page GitHub "Code". 
+Sélectionnez ensuite "Download ZIP". 
+<br>Une fois votre fichier zip téléchargé, il ne vous reste plus qu'à le décompresser (avec WinRaR par exemple) pour pouvoir utiliser le code source !
 
 ## Emailware
 
@@ -79,23 +86,18 @@ Markdownify is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning
 
 ## Crédits
 
-This software uses the following open source packages:
+Ce projet a été développé par les personnes suivantes :
 
-- Thomas BOTTALICO
-- Rayane BOUSSOURA : designer graphique
-- Alexandre BRENSKI ; développeur menu
-- Arthur HACQUES
-- Tess POIRAT : développeuse gameplay
-- Adrien RIVET : développeur gameplay
+- Thomas BOTTALICO (thomas.bottalico@efrei.net)
+- Rayane BOUSSOURA (rayane.boussoura@efrei.net)
+- Alexandre BRENSKI (alexandre.brenski@efrei.net)
+- Arthur HACQUES (arthur.hacques@efrei.net)
+- Tess POIRAT (tess.poirat@efrei.net)
+- Adrien RIVET (adrien.rivet@efrei.net)
+
+N'hésitez pas à nous contacter par mail si vous avez besoin d'informations !
 
 
 ## License
 
 MIT
-
----
-
-> [amitmerchant.com](https://www.amitmerchant.com) &nbsp;&middot;&nbsp;
-> GitHub [@amitmerchant1990](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
-> Twitter [@amit_merchant](https://twitter.com/amit_merchant)
-

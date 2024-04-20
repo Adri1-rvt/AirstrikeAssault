@@ -19,7 +19,7 @@ import time # import de la librairie time pour le gestion du temps
 # initialiser pygame
 pygame.init()
 
-# géré les problémes causées sur le système d'exploitation MacOs
+# gérer les problémes causées sur le système d'exploitation MacOs
 if platform.system() == 'Darwin': # vérifier si le système est un MacOs
     f = open("/dev/null", "w")
     os.dup2(f.fileno(), 2)
@@ -31,7 +31,7 @@ screen = pygame.display.set_mode((1280, 667)) # attribuer une taille à la fenet
 pygame.display.set_icon(pygame.image.load('assets/jet.png')) # attribuer un logo à la fenêtre
 
 # importer l'arrière plan du jeu
-background = pygame.image.load("assets/background.png") # affection l'image de l'arrière plan
+background = pygame.image.load("assets/background2.png") # affection l'image de l'arrière plan
 
 # charger le jeu
 game = Game() # appel de la classe Game pour charger le jeu
@@ -47,7 +47,7 @@ while running :
     screen.blit(background, (0, 0))
 
     # appliqer l'image du bateau
-    screen.blit(game.player.image, (200, 360))
+    screen.blit(game.player.image, (200, 420))
 
     # récupérer les projectiless du joueur
     for missile in game.player.all_missiles :
@@ -72,6 +72,11 @@ while running :
 
     # maj de l'écran
     pygame.display.flip()
+
+    # Dessine et déplace les bombes
+    for bomb in game.all_bombs:
+        screen.blit(bomb.image, (bomb.rect.x, bomb.rect.y))
+        bomb.move()
 
     # si l'utiisateur ferme la fenêtre
     for element in pygame.event.get():

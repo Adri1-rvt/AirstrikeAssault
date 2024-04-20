@@ -23,6 +23,8 @@ class Game:
         self.all_planes = pygame.sprite.Group()
         self.pressed = {}
         self.spawn_plane()
+        # Groupe pour gérer toutes les bombes du jeu
+        self.all_bombs = pygame.sprite.Group()
 
     # fonction de gestion des collisions
     def check_collision(self, sprite, group):
@@ -30,5 +32,5 @@ class Game:
 
     # fonction de spawn des jets
     def spawn_plane(self):
-        plane = Plane()
+        plane = Plane(self)  # Passer la référence au jeu lors de la création de l'instance de Plane
         self.all_planes.add(plane)
