@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbbf8982-bf75-4dd9-af74-8b0076b79403" name="Changes" comment="Update 05/03">
+    <list default="true" id="fbbf8982-bf75-4dd9-af74-8b0076b79403" name="Changes" comment="Update 20/04">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bomb.py" beforeDir="false" afterPath="$PROJECT_DIR$/bomb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plane.py" beforeDir="false" afterPath="$PROJECT_DIR$/plane.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +172,9 @@
       <workItem from="1713205320459" duration="1053000" />
       <workItem from="1713256786505" duration="2875000" />
       <workItem from="1713289572808" duration="179000" />
+      <workItem from="1713646667957" duration="127000" />
+      <workItem from="1713707066374" duration="1264000" />
+      <workItem from="1714124463709" duration="688000" />
     </task>
     <task id="LOCAL-00001" summary="Initial comit">
       <option name="closed" value="true" />
@@ -242,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709640042411</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update 20/04">
+      <option name="closed" value="true" />
+      <created>1713646708421</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713646708421</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,10 +261,11 @@
     <MESSAGE value="Update 05/02" />
     <MESSAGE value="Update 04/03" />
     <MESSAGE value="Update 05/03" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 05/03" />
+    <MESSAGE value="Update 20/04" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 20/04" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Airstrike_Assault$test.coverage" NAME="test Coverage Results" MODIFIED="1709737716855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Airstrike_Assault$main.coverage" NAME="main Coverage Results" MODIFIED="1713289684801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Airstrike_Assault$main.coverage" NAME="main Coverage Results" MODIFIED="1714124464579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -80,9 +80,6 @@ Vous pouvez télécharger notre code source depuis notre page GitHub accessible 
 Sélectionnez ensuite "Download ZIP". 
 <br>Une fois votre fichier zip téléchargé, il ne vous reste plus qu'à le décompresser (avec WinRaR par exemple) pour pouvoir utiliser le code source !
 
-## Emailware
-
-Markdownify is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <bullredeyes@gmail.com> about anything you'd want to say about this software. I'd really appreciate it!
 
 ## Crédits
 
@@ -96,8 +93,3 @@ Ce projet a été développé par les personnes suivantes :
 - Adrien RIVET (adrien.rivet@efrei.net)
 
 N'hésitez pas à nous contacter par mail si vous avez besoin d'informations !
-
-
-## License
-
-MIT
