@@ -9,7 +9,6 @@ Version : 1.1
 
 import pygame # import de la librairie pygame pour gérer le jeu
 import random # import de la librairie random pour créer des évènements aléatoires
-from bomb import Bomb
 
 
 """CORPS DU PROGRAMME"""
@@ -35,17 +34,16 @@ class Plane(pygame.sprite.Sprite):
         self.rect.x = 1200 + random.randint(0, 500) # redéfinition aléatoire de la position en x du jet respawn
         self.rect.y = 20 + random.randint(0, 100) # redéfinition aléatoire de la position en y du jet respawn
         self.health = self.max_health # réaffectation de la vie du jet respawn
-
-    def drop_bomb(self):
-        bomb = Bomb(self.rect.x, self.rect.y)  # Crée une bombe à la position de l'avion
-        self.game.all_bombs.add(bomb)  # Ajoute la bombe au groupe de toutes les bombes du jeu
+        self.game.score += 1
 
     # fonction de déplacement du jet
     def forward(self):
         self.rect.x -= self.velocity # affectation de la nouvelle position du jet en fonction de la vitesse pour le faire avancer
 
-        if abs(self.rect.x - 200) < 10:
+        if abs(self.rect.x - 200) < 5:
             print("tirer !")
+            self.game.player.damage()
+
 
         # vérifier que le jet n'est plus présent sur l'écran
         if self.rect.x < -150:

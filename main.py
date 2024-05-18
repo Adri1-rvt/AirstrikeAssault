@@ -18,7 +18,7 @@ from config import missile_fire_rate  # import du taux de tir de missile depuis 
 # initialiser pygame
 pygame.init()
 
-# gérer les problèmes causés sur le système d'exploitation MacOs
+# gérer les problèmes causés sur le système d'exploitation MacOs (toujours il nous casse les pieds cet OS...)
 if platform.system() == 'Darwin':  # vérifier si le système est un MacOs
     f = open("/dev/null", "w")
     os.dup2(f.fileno(), 2)
@@ -44,6 +44,7 @@ play_button_rect.y = 530
 
 # charger le jeu
 game = Game()  # appel de la classe Game pour charger le jeu
+game.sound_manager.play('game')
 running = True  # définition de la variable d'exécution sur True
 
 # Variables pour le contrôle du délai entre les tirs de missiles
@@ -56,6 +57,9 @@ clock = pygame.time.Clock()
 while running:
     # appliquer l'arrière-plan du jeu
     screen.blit(background, (0, 0))
+
+    # appliquer la barre de vie
+    game.player.update_health_bar(screen)
 
     if game.is_playing:
         game.update(screen)
@@ -82,6 +86,7 @@ while running:
             if element.key == pygame.K_SPACE:
                 current_time = time.time()
                 if current_time - last_missile_time >= missile_fire_rate:
+                    game.sound_manager.play('missile')
                     game.player.launch_missile()  # appel de la fonction de lancement du missile
                     last_missile_time = current_time  # maj du temps du dernier lancement de missile
 
@@ -91,4 +96,5 @@ while running:
         elif element.type == pygame.MOUSEBUTTONDOWN:
             if play_button_rect.collidepoint(element.pos):
                 # lancer le jeu
-                game.is_playing = True
+                game.start()
+                game.sound_manager.play('click')

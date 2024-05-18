@@ -25,6 +25,17 @@ class Player(pygame.sprite.Sprite) :
         self.all_missiles = pygame.sprite.Group()
         self.image = pygame.transform.scale(pygame.image.load("assets/boat.png"), (200, 200)) # redimensionner l'image en 200x200 et affecter l'image
 
+
+    def damage(self):
+        if self.health - 20 > 20 :
+            self.health -= 20
+        else:
+            self.game.game_over()
+
+    def update_health_bar(self, surface):
+        pygame.draw.rect(surface, (60, 63, 60), [250, 400, self.max_health, 5])
+        pygame.draw.rect(surface, (111, 210, 46), [250, 400, self.health, 5])
+
     def launch_missile(self) :
         # créer une nouvelle instance de la classe Missile
         self.all_missiles.add(Missile(self))
