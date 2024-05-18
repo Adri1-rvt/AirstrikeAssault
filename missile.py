@@ -10,7 +10,7 @@ Version : 1.1
 import pygame # import de la librairie pygame pour gérer le jeu
 import plane # import du fichier plane.py
 import time # import de la librairie time pour gérer le temps dans le jeu
-
+import math
 
 """CORPS DU PROGRAMME"""
 
@@ -20,10 +20,17 @@ screen = pygame.display.set_mode((1280, 667)) # attribuer une taille à la fenet
 class Missile(pygame.sprite.Sprite) :
     def __init__(self, player) :
         super().__init__()
-        self.velocity = 10 # vitesse du missile
+        self.velocity_x = 10 # vitesse du missile
+
+        """--------------"""
+        self.velocity_y = -20  # vitesse verticale initiale du missile
+        self.gravity = 0.5  # gravité
+        """--------------"""
+
         self.player = player
-        self.image = pygame.transform.scale(pygame.image.load("assets/missile_2.png"), (30, 83)) # application de l'image redimensionnée au missile
-        self.image = pygame.transform.rotate(self.image, -45) # rotation de l'image du missile
+        self.image_original = pygame.transform.scale(pygame.image.load("assets/missile_2.png"), (30, 83))
+        self.image_original = pygame.transform.rotate(self.image_original, -85)
+        self.image = self.image_original.copy()
         self.rect = self.image.get_rect() # obtention de la hitbox du missile
         self.rect.x = 325 # position initiale en x du missile
         self.rect.y = 390 # position initiale en y du missile
@@ -34,8 +41,14 @@ class Missile(pygame.sprite.Sprite) :
 
     # fonction de gestion de la trajectoire du missile
     def move(self) :
-        self.rect.y -= self.velocity # affectation de nouvelle coordonnée en y du missile
-        self.rect.x += self.velocity  # affectation de nouvelle coordonnée en y du missile
+        self.velocity_y += self.gravity
+
+
+        self.rect.y += self.velocity_y # affectation de nouvelle coordonnée en y du missile
+        self.rect.x += self.velocity_x  # affectation de nouvelle coordonnée en y du missile
+
+        angle = math.degrees(math.atan2(self.velocity_y, self.velocity_x))
+        self.image = pygame.transform.rotate(self.image_original, -angle)
 
         # vérifier si le missile touche un avion
         if self.player.game.check_collision(self, self.player.game.all_planes):

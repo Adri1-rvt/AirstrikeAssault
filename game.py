@@ -4,19 +4,21 @@ Auteurs : Thomas BOTTALICO, Rayane BOUSSOURA, Alexandre BRENSKI, Arthur HACQUES,
 Version : 1.1
 """
 
-
 """IMPORT DES LIBRAIRIES ET DES FONCTIONS EXTERNES"""
 
-import pygame # import de la librairie pygame pour gérer le jeu
-from player import Player # import de la classe Player depuis player.py
-from plane import Plane # import de la classe Plane depuis plane.py
-
+import pygame  # import de la librairie pygame pour gérer le jeu
+from player import Player  # import de la classe Player depuis player.py
+from plane import Plane  # import de la classe Plane depuis plane.py
+from config import missile_fire_rate  # import du taux de tir de missile depuis config.py
+import time
 
 """CORPS DU PROGRAMME"""
 
 # classe qui gère le jeu
 class Game:
     def __init__(self):
+        # définir si le jeu a commencé
+        self.is_playing = False
         # générer notre jeu
         self.player = Player(self)
         # groupe de jet
@@ -25,6 +27,39 @@ class Game:
         self.spawn_plane()
         # Groupe pour gérer toutes les bombes du jeu
         self.all_bombs = pygame.sprite.Group()
+
+    def update(self, screen):
+        # appliquer l'image du bateau
+        screen.blit(self.player.image, (200, 420))
+
+        # récupérer les projectiles du joueur
+        for missile in self.player.all_missiles:
+            missile.move()
+
+        # récupérer les avions
+        for plane in self.all_planes:
+            plane.forward()
+
+            # Vérifier la collision entre les missiles et les avions
+            for missile in self.player.all_missiles:
+                if pygame.sprite.collide_rect(missile, plane):
+                    missile.explode()  # Appel de la fonction d'explosion du missile
+                    plane.respawn()  # Appel de la fonction respawn de l'avion
+                    missile.remove()  # Supprimer le missile
+
+        # appliquer l'ensemble des images du groupe de missiles
+        self.player.all_missiles.draw(screen)
+
+        # appliquer l'ensemble des images du groupe de jets
+        self.all_planes.draw(screen)
+
+        # mise à jour de l'écran
+        pygame.display.flip()
+
+        # Dessiner et déplacer les bombes
+        for bomb in self.all_bombs:
+            screen.blit(bomb.image, (bomb.rect.x, bomb.rect.y))
+            bomb.move()
 
     # fonction de gestion des collisions
     def check_collision(self, sprite, group):
