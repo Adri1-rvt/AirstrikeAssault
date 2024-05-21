@@ -19,15 +19,15 @@ from config import missile_fire_rate  # import du taux de tir de missile depuis 
 pygame.init()
 
 # gérer les problèmes causés sur le système d'exploitation MacOs (toujours il nous casse les pieds cet OS...)
-if platform.system() == 'Darwin':  # vérifier si le système est un MacOs
+if platform.system() == 'Darwin':
     f = open("/dev/null", "w")
     os.dup2(f.fileno(), 2)
     f.close()
 
 # générer la fenêtre du jeu
-pygame.display.set_caption("Airstrike Assault")  # attribuer un nom à la fenêtre
-screen = pygame.display.set_mode((1280, 667))  # attribuer une taille à la fenêtre (en pixels)
-pygame.display.set_icon(pygame.image.load('assets/jet.png'))  # attribuer un logo à la fenêtre
+pygame.display.set_caption("Airstrike Assault")
+screen = pygame.display.set_mode((1280, 667))
+pygame.display.set_icon(pygame.image.load('assets/jet.png'))
 
 # importer l'arrière-plan du jeu
 background = pygame.image.load("assets/background2.png")  # affecter l'image de l'arrière-plan
@@ -35,7 +35,6 @@ background = pygame.image.load("assets/background2.png")  # affecter l'image de 
 # charger la bannière et le bouton de jeu
 banner = pygame.image.load("assets/homescreen.png")
 banner = pygame.transform.scale(banner, (1280, 667))
-
 play_button = pygame.image.load("assets/button.png")
 play_button = pygame.transform.scale(play_button, (280, 150))
 play_button_rect = play_button.get_rect()
@@ -43,9 +42,9 @@ play_button_rect.x = 140
 play_button_rect.y = 530
 
 # charger le jeu
-game = Game()  # appel de la classe Game pour charger le jeu
+game = Game()
 game.sound_manager.play('game')
-running = True  # définition de la variable d'exécution sur True
+running = True
 
 # Variables pour le contrôle du délai entre les tirs de missiles
 last_missile_time = time.time()
@@ -61,6 +60,7 @@ while running:
     # appliquer la barre de vie
     game.player.update_health_bar(screen)
 
+    # mettre à jour l'écran
     if game.is_playing:
         game.update(screen)
     else:
@@ -85,6 +85,8 @@ while running:
             # détecter si la touche espace est pressée pour lancer notre projectile
             if element.key == pygame.K_SPACE:
                 current_time = time.time()
+
+                # vérifier qu'un projectile n'a pas déjà été lancé il y a peu de temps
                 if current_time - last_missile_time >= missile_fire_rate:
                     game.sound_manager.play('missile')
                     game.player.launch_missile()  # appel de la fonction de lancement du missile

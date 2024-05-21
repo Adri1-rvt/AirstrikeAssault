@@ -4,20 +4,18 @@ Auteurs : Thomas BOTTALICO, Rayane BOUSSOURA, Alexandre BRENSKI, Arthur HACQUES,
 Version : 1.1
 """
 
+"""IMPORT DES LIBRAIRIES ET DES FONCTIONS EXTERNES"""
+
 import pygame
 
+
+"""CORPS DU PROGRAMME"""
+
 class Bomb(pygame.sprite.Sprite):
-    def __init__(self):
+    def __init__(self, game):
         super().__init__()
-        self.image = pygame.Surface((20, 20))  # Créez une surface rectangulaire pour représenter la bombe
-        self.image.fill((255, 0, 0))  # Remplissez la surface en rouge (vous pouvez changer la couleur selon vos préférences)
-        self.rect = self.image.get_rect()  # Obtenez le rectangle entourant l'image de la bombe
-        self.speed = 5  # Vitesse de chute de la bombe
-
-    def move(self):
-        self.rect.y += self.speed  # Faites descendre la bombe en Y
-
-        # Si la bombe atteint le bas de l'écran, supprimez-la
-        if self.rect.y > 667:  # 667 est la hauteur de votre écran, ajustez-la si nécessaire
-            self.kill()  # Supprimez la bombe du groupe lorsque sa position Y dépasse la hauteur de l'écran
-
+        self.game = game
+        self.image = pygame.transform.scale(pygame.image.load("assets/bomb.png"), (50, 83))
+        self.rect = self.image.get_rect()
+        self.rect.y = 50  # Positionnez la bombe en haut de l'écran
+        self.speed = 4  # Vitesse de déplacement de la bombe vers le bas
