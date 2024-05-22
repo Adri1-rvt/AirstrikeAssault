@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbbf8982-bf75-4dd9-af74-8b0076b79403" name="Changes" comment="Update 19/05">
+    <list default="true" id="fbbf8982-bf75-4dd9-af74-8b0076b79403" name="Changes" comment="Update 21/05">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/explosion_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/explosion_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/helicopter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/submarine.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bomb.py" beforeDir="false" afterPath="$PROJECT_DIR$/bomb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/missile.py" beforeDir="false" afterPath="$PROJECT_DIR$/missile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plane.py" beforeDir="false" afterPath="$PROJECT_DIR$/plane.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/sounds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +205,9 @@
       <workItem from="1716270977835" duration="111000" />
       <workItem from="1716285871519" duration="155000" />
       <workItem from="1716286165643" duration="13000" />
-      <workItem from="1716318601302" duration="6577000" />
+      <workItem from="1716318601302" duration="6978000" />
+      <workItem from="1716389029008" duration="315000" />
+      <workItem from="1716397994163" duration="5581000" />
     </task>
     <task id="LOCAL-00001" summary="Initial comit">
       <option name="closed" value="true" />
@@ -304,7 +313,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716071002206</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update 21/05">
+      <option name="closed" value="true" />
+      <created>1716325593455</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1716325593455</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,10 +338,11 @@
     <MESSAGE value="Update 28/04" />
     <MESSAGE value="Update 18/05" />
     <MESSAGE value="Update 19/05" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update 19/05" />
+    <MESSAGE value="Update 21/05" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 21/05" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Airstrike_Assault$test.coverage" NAME="test Coverage Results" MODIFIED="1709737716855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Airstrike_Assault$main.coverage" NAME="main Coverage Results" MODIFIED="1716324589819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Airstrike_Assault$main.coverage" NAME="main Coverage Results" MODIFIED="1716403595806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
